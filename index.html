@@ -1,0 +1,39 @@
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div id="app">
+	<p>{{ message }}</p> <!-- simply a message in app -->
+</div>
+
+<div id="app-2">
+	<span v-bind:title="message"> <!-- binding a title message in app2 -->
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+  </span>
+</div>
+
+<div id="app-3">
+  <!-- <button v-on:click="toggleSeen">clickme</button> -->
+  <button v-on:click="seen = !seen">clickme</button> <!-- changing seen value onclick to hide show message -->
+  <span v-if="seen">Now you see me</span>
+</div>
+<br/>
+<div id="app-4">
+	<input v-model="texttoadd" placeholder="Enter ToDo Task"><button v-on:click="addTodo">add todo</button>
+  <ul>
+    <li v-for="todo in todos"> <!--  forloop demo -->
+      {{ todo.text }}
+    </li>
+  </ul>
+</div>
+
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+
+<div id="app-6">
+  <p>{{ message }}</p>
+  <input v-model="message">
+</div>
+
+<script src="index.js"></script>
