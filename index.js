@@ -40,7 +40,7 @@ var app4 = new Vue({
   methods : {
   	addTodo : function(){ 																						//handling v-on:click of button to add in above todos
   		this.todos.push({ text : this.texttoadd })
-  		this.texttoadd = "";
+  		this.texttoadd = ""
   	}
   }
 })
