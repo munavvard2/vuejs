@@ -1,23 +1,25 @@
+// doc for vue.js https://vuejs.org/v2/guide/
+
 var app = new Vue({
 	el:'#app',
 	data : {
-		message:'Hey there'
+		message:'Hey there' 																							// just a simple message which p tag will use
 	}
 });
 
 var app2 = new Vue({
   el: '#app-2',
   data: {
-    message: 'You loaded this page on ' + new Date().toLocaleString()
+    message: 'You loaded this page on ' + new Date().toLocaleString() // tooltip / title for that span
   }
 })
 
 var app3 = new Vue({
   el: '#app-3',
   data: {
-    seen: true
+    seen: true 																												// a boolean variable to fulfill v-if
   },
-  // methods : {
+  // methods : { 																											// not needed check the html , v-on:click of button
   // 	toggleSeen:function(){
   // 		this.seen = ! this.seen
   // 	}
@@ -33,10 +35,10 @@ var app4 = new Vue({
       { text: 'Learn Vue' },
       { text: 'Build something awesome' }
     ],
-    texttoadd : '' 
+    texttoadd : '' 																										// v-model for handle input
   },
   methods : {
-  	addTodo : function(){
+  	addTodo : function(){ 																						//handling v-on:click of button to add in above todos
   		this.todos.push({ text : this.texttoadd })
   	}
   }
@@ -50,7 +52,7 @@ var app5 = new Vue({
   },
   methods: {
     reverseMessage: function () {
-      this.message = this.message.split('').reverse().join('')
+      this.message = this.message.split('').reverse().join('') 				// copied from doc 
     }
   }
 })
@@ -58,6 +60,6 @@ var app5 = new Vue({
 var app6 = new Vue({
   el: '#app-6',
   data: {
-    message: 'Hello Vue!'
+    message: 'Hello Vue!' 																						//yes used above , go see that , v-model
   }
 })
